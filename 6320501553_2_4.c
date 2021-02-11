@@ -5,36 +5,42 @@ int main()
     char cha;
     scanf("%c",&cha);
     scanf("%d",&day);
-    d=day%2;
-    if(d==0)
+    if(cha>='A'&&cha<='Z')
     {
-        if(cha<='I')
+        if(day>0&&day<32)
+    {
+        d=day%2;
+        if(d==0)
         {
-            printf("{@_@}");
+            if(cha<='I')
+            {
+                printf("{@_@}");
+            }
+            else if(cha<='R')
+            {
+                printf("{*v*}");
+            }
+            else if(cha<='Z')
+            {
+                printf("{x_x}");
+            }
         }
-        else if(cha<='R')
+        else if(d!=0)
         {
-            printf("{*v*}");
-        }
-        else if(cha<='Z')
-        {
-            printf("{x_x}");
+            if(cha<='I')
+            {
+                printf("(^_^)");
+            }
+            else if(cha<='R')
+            {
+                printf("(*o*)");
+            }
+            else if(cha<='Z')
+            {
+                printf("\\(T_T)/");
+            }
         }
     }
-    else if(d!=0)
-    {
-        if(cha<='I')
-        {
-            printf("(^_^)");
-        }
-        else if(cha<='R')
-        {
-            printf("(*o*)");
-        }
-        else if(cha<='Z')
-        {
-            printf("\\(T_T)/");
-        }
     }
     return 0;
 }
