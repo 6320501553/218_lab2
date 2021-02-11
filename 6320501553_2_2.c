@@ -1,9 +1,8 @@
 #include<stdio.h>
-#include<math.h>
 int main()
 {
     char pro;
-    float min,m=0;
+    float min,m=0,a;
     scanf("%c",&pro);
     scanf("%f",&min);
     if(pro=='A')
@@ -14,7 +13,14 @@ int main()
         {
             min=min*3;
             m=m+min;
-            printf("%.2f",ceil(m));
+            a=(int)m+0.5;
+            if(m>=a)
+            {
+                m=(int)m+1;
+                printf("%.2f",m);
+            }
+            else
+                printf("%.2f",m);
         }
         else
             printf("%.2f",m);
@@ -27,7 +33,14 @@ int main()
         {
             min=min*2;
             m=m+min;
-            printf("%.2f",ceil(m));
+            a=(int)m+0.5;
+            if(m>=a)
+            {
+                m=(int)m+1;
+                printf("%.2f",m);
+            }
+            else
+                printf("%.2f",m);
         }
         else
             printf("%.2f",m);
